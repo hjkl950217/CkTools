@@ -1,0 +1,50 @@
+@echo off
+chcp 65001 >nul
+setlocal enabledelayedexpansion
+
+echo 拉取最新代码...
+git pull
+if %errorlevel% neq 0 (
+    echo [错误] git pull 失败，请检查网络或仓库配置。
+    pause
+    exit /b 1
+)
+
+echo 添加所有修改...
+git add .
+
+echo 检查当前状态...
+set hasChanges=
+for /f "delims=" %%i in ('git status --porcelain') do set hasChanges=1
+
+if defined hasChanges (
+    echo 发现有文件改动。
+    set /p "confirm=是否继续提交并推送？ (Y/N): "
+    if /i "!confirm!"=="Y" (
+        set /p "commitMsg=请输入提交信息（留空则使用默认）: "
+        if "!commitMsg!"=="" set "commitMsg=更新文件"
+        echo 正在提交代码...
+        git commit -m "!commitMsg!"
+        if !errorlevel! neq 0 (
+            echo [错误] git commit 失败。
+            pause
+            exit /b 1
+        )
+        echo 正在推送代码...
+        git push
+        if !errorlevel! neq 0 (
+            echo [错误] git push 失败。
+            pause
+            exit /b 1
+        )
+        echo 操作完成。
+    ) else (
+        echo 已取消提交和推送。
+    )
+) else (
+    echo 没有发现需要提交的改动。
+)
+
+pause
+endlocal
+exit /b 0

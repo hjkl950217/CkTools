@@ -1,4 +1,5 @@
 @echo off
+chcp 65001
 
 
 echo 拉取最新代码...
