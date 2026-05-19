@@ -1,0 +1,7 @@
+claude-code-router
+	https://github.com/musistudio/claude-code-router
+	根据您的需求将请求路由到不同的模型
+
+cc-switch
+	https://github.com/farion1231/cc-switch
+	本地供应商直接切换，还有提供mcp\skill管理功能
