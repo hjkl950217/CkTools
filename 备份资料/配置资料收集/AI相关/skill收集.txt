@@ -1,0 +1,7 @@
+操作word、ppt、pdf的skill
+	https://github.com/anthropics/skills/tree/main/skills
+	cc-switch里直接搜索docx就可以安装
+
+操作浏览器-浏览器自动化 playwright-cli
+	https://github.com/microsoft/playwright-cli
+	微软提供的一个自动化skill，更快更节约token。缺点是使用时最好让AI附加上“--headed”和“--persistent”参数以保持能看到窗口以及保持会话
