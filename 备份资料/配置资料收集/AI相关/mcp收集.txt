@@ -1,0 +1,8 @@
+网络搜索  zhipu-search
+	智谱提供的搜索MCP服务，需要充钱。配置可能要参考官网
+
+
+连接到浏览器 mcp-chrome
+	可以安装浏览器插件直接连接到正在使用中的浏览器。缺点是经常断，每次开cc要用就得重连一
+	https://github.com/hangwin/mcp-chrome
+
