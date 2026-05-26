@@ -36,6 +36,7 @@
 | 工作习惯 | 先阅读再修改，不确定时先确认 | 避免误操作 | 第三节"工作习惯" |
 | 保持结构 | 不随意重构 | 维护代码稳定性 | 工作习惯第3条 |
 | 工具引用 | @RTK.md | 引入 RTK 使用说明 | 第四节"工具使用" |
+| graphify skill | `/graphify` 触发 | 知识图谱工具，任何输入转为知识图谱 | 第五节"工具使用" |
 
 ---
 
@@ -83,7 +84,6 @@
 
 | 配置项 | 值 | 作用 | 位置 |
 |--------|-----|------|------|
-| defaultMode | `auto` | 默认权限模式（自动批准） | permissions.defaultMode |
 | allow | 3 条规则 | 允许的操作白名单 | permissions.allow |
 
 ###### permissions.allow 白名单详情
@@ -121,6 +121,7 @@
 **作用**：Token 优化代理，通过重写 Bash 命令节省 60-90% 开销
 **发布地址**：https://github.com/rtk-ai/rtk/releases
 **安装位置**：`C:\Users\<用户名>\.claude\rtk.exe`（需根据新环境调整）
+**版本**：→ 参见 [版本清单](Claude_Code_版本清单.md)
 **配置方式**：无独立配置文件，通过 Claude Code 的 hooks 机制调用
 **依赖关系**：
 - 被 settings.json 的 hooks.PreToolUse 钩子调用
@@ -148,12 +149,13 @@
 | 依赖项 | 作用 | 是否必需 |
 |--------|------|----------|
 | ccstatusline-zh | 状态栏工具，通过 npx 自动安装 | **否** |
-| chrome-devtools-mcp | Chrome 浏览器开发工具，版本 0.22.0 | **否** |
+| chrome-devtools-mcp | Chrome 浏览器开发工具 | **否** |
 | docx MCP 服务 | Word 文档处理 | **否** |
 | mcp-360chrome MCP 服务 | Chrome 浏览器交互 | **否** |
 
 ### MCP 服务配置 - chrome-devtools-mcp
 **配置文件**：`C:\Users\<用户名>\.claude\plugins\marketplaces\chrome-devtools-plugins\.mcp.json`
+**版本**：→ 参见 [版本清单](Claude_Code_版本清单.md)
 **配置内容**：
 ```json
 {
@@ -177,11 +179,21 @@
 **作用**：智谱搜索服务，提供网络搜索能力
 
 ### Skill 配置
-**当前状态**：使用官方插件提供的 skill，无用户自定义 skill
+**当前状态**：使用官方插件提供的 skill + 自定义 skill
 **主要 skill 来源**：
 - claude-plugins-official（官方插件）
 - chrome-devtools-plugins（Chrome 开发工具插件）
 - playwright-cli（浏览器自动化测试工具）
+
+**自定义 skill（~/.claude/skills/）**：
+| skill 名称 | 触发方式 | 作用 |
+|------------|----------|------|
+| graphify | `/graphify` | 知识图谱工具，任何输入转为知识图谱 |
+| docx | `/docx` | Word 文档处理（符号链接 → .cc-switch/skills/docx） |
+| html-ppt | `/html-ppt` | HTML 演示文稿制作（符号链接 → .cc-switch/skills/html-ppt） |
+| pptx | `/pptx` | PowerPoint 演示文稿处理（符号链接 → .cc-switch/skills/pptx） |
+| xlsx | `/xlsx` | Excel 电子表格处理（符号链接 → .cc-switch/skills/xlsx） |
+| playwright-cli | `/playwright-cli` | 浏览器自动化测试（符号链接 → .cc-switch/skills/playwright-cli） |
 
 ---
 
@@ -189,17 +201,18 @@
 
 | 工具/文件 | 配置项数量 |
 |-----------|------------|
-| Claude Code - CLAUDE.md | 14 项 |
+| Claude Code - CLAUDE.md | 15 项 |
 | Claude Code - RTK.md | 10 项 |
-| Claude Code - settings.json | 33 项 |
+| Claude Code - settings.json | 15 项 |
 | RTK | 0 项（无独立配置） |
 | 外部依赖 | 6 项 |
 | MCP 服务配置 | 7 项 |
-| Skill 配置 | 3 项 |
+| Skill 配置 | 9 项 |
 | 插件详细配置 | → 另见 [插件配置清单](Claude_Code_插件配置清单.md)（42 项） |
-| **总计** | **73 项 + 42 项** |
+| **总计** | **62 项 + 45 项** |
 
 ---
 
 *备份时间：2026/05/18*
 *插件配置清单添加：2026/05/21*
+*环境检查更新：2026/05/21*

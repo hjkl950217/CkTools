@@ -17,7 +17,7 @@
 
 **项目地址**：https://github.com/huangguang1999/ccstatusline-zh
 **上游项目**：https://github.com/sirmalloc/ccstatusline
-**当前版本**：v2.2.19
+**版本**：→ 参见 [版本清单](Claude_Code_版本清单.md)
 **安装方式**：`npm install -g ccstatusline-zh`
 **配置界面**：`ccstatusline-zh setup`（交互式 TUI）
 
@@ -66,7 +66,9 @@
 | 4 | 28863e34... | `custom-text` | ` \| ` | 分隔符文本 |
 | 5 | b0371079... | `tokens-output` | — | 显示输出 Token 数量 |
 | 6 | a97d1915... | `custom-text` | ` \| ` | 分隔符文本 |
-| 7 | 8584f767... | `total-speed` | — | 显示总 Token 速度 (tok/s) |
+| 7 | 1d962898... | `tokens-total` | — | 显示 Token 合计 |
+| 8 | 86066bc3... | `custom-text` | ` \| ` | 分隔符文本 |
+| 9 | 8584f767... | `total-speed` | — | 显示总 Token 速度 (tok/s) |
 
 **第 3 行**：空行（预留）
 
@@ -79,6 +81,7 @@
 | colorLevel | `2` | 颜色级别（2 = 256 色） |
 | inheritSeparatorColors | `false` | 分隔符不继承前后组件颜色 |
 | globalBold | `false` | 全局不加粗 |
+| gitCacheTtlSeconds | `5` | Git 信息缓存 TTL（5 秒） |
 | minimalistMode | `false` | 极简模式关闭（显示标签） |
 
 #### Powerline 配置
@@ -227,7 +230,7 @@
 
 **安装方式**：通过 Claude Code 插件市场安装
 **插件标识**：`chrome-devtools-mcp@claude-plugins-official`
-**版本**：0.22.0
+**版本**：→ 参见 [版本清单](Claude_Code_版本清单.md)
 
 ### MCP 配置
 
@@ -262,6 +265,7 @@
 
 **发布地址**：https://github.com/rtk-ai/rtk/releases
 **安装位置**：`C:\Users\<用户名>\.claude\rtk.exe`
+**版本**：→ 参见 [版本清单](Claude_Code_版本清单.md)
 **配置方式**：无独立配置文件，通过 Claude Code 的 hooks 机制调用
 
 ### hooks 配置
@@ -305,12 +309,13 @@
 
 | 插件/工具 | 配置项数量 | 备注 |
 |-----------|------------|------|
-| ccstatusline-zh | 31 项 | 含布局 7 组件 + 样式 6 项 + Powerline 7 项 + statusLine 3 项 + TUI 配置 |
+| ccstatusline-zh | 33 项 | 含布局 9 组件 + 样式 7 项 + Powerline 7 项 + statusLine 3 项 + TUI 配置 |
 | chrome-devtools-mcp | 4 项 | MCP 配置 |
-| RTK | 5 项 | hooks 配置 + 元命令 |
+| RTK | 6 项 | hooks 配置 + 元命令 + 版本信息 |
 | MCP 服务 | 2 项 | github + zhipu-search |
-| **总计** | **42 项** | |
+| **总计** | **45 项** | |
 
 ---
 
 *备份时间：2026/05/21*
+*环境检查更新：2026/05/21*
