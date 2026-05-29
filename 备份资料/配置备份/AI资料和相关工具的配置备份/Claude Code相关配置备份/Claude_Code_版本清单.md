@@ -39,6 +39,8 @@
 | pptx | .cc-switch/skills（符号链接） | `/pptx` | PowerPoint 处理 |
 | xlsx | .cc-switch/skills（符号链接） | `/xlsx` | Excel 电子表格 |
 | playwright-cli | .cc-switch/skills（符号链接） | `/playwright-cli` | 浏览器自动化测试 |
+| frontend-design | .cc-switch/skills（符号链接） | `/frontend-design` | 前端界面设计 |
+| simplify | 内置 | `/simplify` | 代码简化，审查 diff 并修复 |
 
 ## ccstatusline-zh 组件版本
 

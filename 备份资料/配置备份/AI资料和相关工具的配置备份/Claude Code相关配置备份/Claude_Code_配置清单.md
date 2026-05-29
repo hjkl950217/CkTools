@@ -194,6 +194,8 @@
 | pptx | `/pptx` | PowerPoint 演示文稿处理（符号链接 → .cc-switch/skills/pptx） |
 | xlsx | `/xlsx` | Excel 电子表格处理（符号链接 → .cc-switch/skills/xlsx） |
 | playwright-cli | `/playwright-cli` | 浏览器自动化测试（符号链接 → .cc-switch/skills/playwright-cli） |
+| frontend-design | `/frontend-design` | 前端界面设计，创建高质量 Web 组件和页面（符号链接 → .cc-switch/skills/frontend-design） |
+| simplify | `/simplify` | 代码简化，审查当前 diff 并应用修复 |
 
 ---
 
@@ -207,9 +209,9 @@
 | RTK | 0 项（无独立配置） |
 | 外部依赖 | 6 项 |
 | MCP 服务配置 | 7 项 |
-| Skill 配置 | 9 项 |
+| Skill 配置 | 11 项 |
 | 插件详细配置 | → 另见 [插件配置清单](Claude_Code_插件配置清单.md)（42 项） |
-| **总计** | **62 项 + 45 项** |
+| **总计** | **64 项 + 45 项** |
 
 ---
 
