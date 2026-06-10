@@ -1,6 +1,0 @@
-host.docker.internal
-	可以在docker中指代宿主机
-
-docker desktop的windows模式下无法绑定文件，只能绑定目录
-
-有时带绑定文件启动容器失败,可能是docker desktop中，驱动器共享没有设置

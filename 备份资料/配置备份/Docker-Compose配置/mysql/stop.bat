@@ -1,1 +1,0 @@
-docker-compose -f docker-compose-dataBase.yml stop

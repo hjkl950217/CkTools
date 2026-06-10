@@ -1,1 +1,0 @@
-createobject("wscript.shell").run "E:\poweroff.bat",0

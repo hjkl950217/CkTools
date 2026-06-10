@@ -1,4 +1,0 @@
-netstat -abn  			#查看端口绑定+程序名
-taskkill /im nginx-NJ.exe /f 		#通配名称来批量杀死
-
-tasklist | findstr ng   			#查看当前运行的程序 包含'ng的'

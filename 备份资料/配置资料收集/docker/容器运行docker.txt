@@ -1,7 +1,0 @@
-镜像要安装有 docker-ce-cli 
-其它情况下 把这2个文件映射进去。
-
-docker run -itd \
--v /var/run/docker.sock:/var/run/docker.sock \
--v /usr/bin/docker:/usr/bin/docker \
-192.168.1.100/lib/gmp_cicd:20210308-5

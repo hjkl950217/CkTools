@@ -1,7 +1,0 @@
-1. advcpmv	能显示复制文件时的进度和速度，cp mv的替代品
-2. htop		top的替代品，更好的查看当前电脑的资源占用情况
-3. proxychains  能在linux上代理。 proxychains4 xxx  xxx就是自己的命令
-4. ShellClash 支持openWrt和linux的clash客户端 多协议支持，科学上网
-5. wondershaper 能针对网卡限速，但识别不了虚拟网卡
-6. nethogs	按进程实时统计网络带宽利用率,最直观
-7. iotop 类似top命令，但查看的是IO占用情况，o 只查看当前有IO的进程  r 升序/降序

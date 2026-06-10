@@ -1,5 +1,0 @@
-  <ItemGroup>
-    <Compile Include="..\VMS.Data\Enum\*.*">
-      <Link>Enum\%(RecursiveDir)%(FileName)%(Extension)</Link>
-    </Compile>
-  </ItemGroup>

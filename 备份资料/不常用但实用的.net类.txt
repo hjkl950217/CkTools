@@ -1,7 +1,0 @@
-1. BitArray			System.Collections		一个元素大小是 bit 的数组
-2. BitVector32		System.Collections.Specialized		同上,固定32长度,值类型，存在栈上
-3. Interlocked		System.Threading	可以让部分一行代码变为原子操作
-4. ThreadLocal		System.Threading	在线程级别存放公共变量
-5.Queue			System.Collections.Generic	队列,先入先也,也可以当单向链表用
-   ConcurrentQueue		System.Collections.Concurrent	Queue的多线程版本
-6.Stack			System.Collections.Generic	栈,先入后出

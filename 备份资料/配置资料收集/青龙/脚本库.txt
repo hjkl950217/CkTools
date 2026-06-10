@@ -1,5 +1,0 @@
-only_for_happly  有小米社区：
-https://github.com/wd210010/only_for_happly
-
-6dylan6（主要是京东）：
-https://github.com/6dylan6/jdpro

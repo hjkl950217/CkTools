@@ -1,6 +1,0 @@
-  <PropertyGroup>
-    <!--<DocumentationFile>..\xmldoc\$(MSBuildProjectName).xml</DocumentationFile>-->
-    <DocumentationFile>$(OutDir)\$(MSBuildProjectName).xml</DocumentationFile>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
-  </PropertyGroup>

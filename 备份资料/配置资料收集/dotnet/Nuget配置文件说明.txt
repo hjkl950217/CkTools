@@ -1,8 +1,0 @@
-配置节
-	https://docs.microsoft.com/zh-cn/nuget/reference/nuget-config-file
-
-常见的配置
-	https://docs.microsoft.com/zh-cn/nuget/consume-packages/configuring-nuget-behavior#config-file-locations-and-uses
-
-缓存位置
-	https://docs.microsoft.com/zh-cn/nuget/consume-packages/managing-the-global-packages-and-cache-folders

@@ -1,1 +1,0 @@
-https://blog.walterlv.com/post/understand-the-csproj.html

@@ -1,7 +1,0 @@
-graphify
-	https://github.com/safishamsi/graphify
-	读取文件，并构建知识图谱，把原本不明显的结构关系还给你
-
-cc-statusline-zh
-	https://github.com/huangguang1999/ccstatusline-zh
-	在cc运行时直接显示一些状态
