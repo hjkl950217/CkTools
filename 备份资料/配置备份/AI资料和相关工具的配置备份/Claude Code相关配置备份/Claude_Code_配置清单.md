@@ -99,10 +99,9 @@
 
 | 配置项 | 值 | 作用 | 位置 |
 |--------|-----|------|------|
-| 钩子1 匹配器 | `Bash` | 匹配所有 Bash 命令 | hooks.PreToolUse[0].matcher |
-| 钩子1 命令 | `C:\Users\<用户名>\.claude\rtk.exe hook claude` | RTK 命令重写（硬编码路径） | hooks.PreToolUse[0].hooks[0].command |
-| 钩子2 匹配器 | `Bash` | 匹配所有 Bash 命令 | hooks.PreToolUse[1].matcher |
-| 钩子2 命令 | `rtk hook claude` | RTK 命令重写（使用命令名） | hooks.PreToolUse[1].hooks[0].command |
+| 钩子匹配器 | `Bash` | 匹配所有 Bash 命令 | hooks.PreToolUse[0].matcher |
+| 钩子命令 | `C:\Users\<用户名>\.claude\rtk.exe hook claude` | RTK 命令重写（硬编码路径） | hooks.PreToolUse[0].hooks[0].command |
+| 钩子类型 | `command` | 钩子类型 | hooks.PreToolUse[0].hooks[0].type |
 
 ##### 其他配置
 
@@ -205,16 +204,17 @@
 |-----------|------------|
 | Claude Code - CLAUDE.md | 15 项 |
 | Claude Code - RTK.md | 10 项 |
-| Claude Code - settings.json | 15 项 |
+| Claude Code - settings.json | 20 项 |
 | RTK | 0 项（无独立配置） |
 | 外部依赖 | 6 项 |
 | MCP 服务配置 | 7 项 |
 | Skill 配置 | 11 项 |
 | 插件详细配置 | → 另见 [插件配置清单](Claude_Code_插件配置清单.md)（42 项） |
-| **总计** | **64 项 + 45 项** |
+| **总计** | **69 项 + 44 项** |
 
 ---
 
 *备份时间：2026/05/18*
 *插件配置清单添加：2026/05/21*
 *环境检查更新：2026/05/21*
+*配置更新：2026/06/10*

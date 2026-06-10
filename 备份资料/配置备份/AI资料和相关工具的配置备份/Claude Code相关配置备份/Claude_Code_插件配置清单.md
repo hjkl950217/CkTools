@@ -50,7 +50,7 @@
 |------|---------|------|------|------|
 | 1 | 1 | `model` | cyan | 显示当前 Claude 模型名称 |
 | 2 | 2 | `separator` | — | 分隔符 |
-| 3 | 3 | `context-length` | brightBlack | 显示当前上下文 Token 数 |
+| 3 | b3255246... | `context-bar` | magenta | 上下文用量进度条 |
 | 4 | 4 | `separator` | — | 分隔符 |
 | 5 | 5 | `git-branch` | magenta | 显示当前 Git 分支名 |
 | 6 | 6 | `separator` | — | 分隔符 |
@@ -60,15 +60,15 @@
 
 | 顺序 | 组件 ID | 类型 | 自定义文本 | 作用 |
 |------|---------|------|------------|------|
-| 1 | 7e10a4fa... | `tokens-input` | — | 显示输入 Token 数量 |
-| 2 | efd54c9a... | `custom-text` | ` \| ` | 分隔符文本 |
-| 3 | a9b7cd5f... | `tokens-cached` | — | 显示缓存 Token 数量 |
-| 4 | 28863e34... | `custom-text` | ` \| ` | 分隔符文本 |
-| 5 | b0371079... | `tokens-output` | — | 显示输出 Token 数量 |
-| 6 | a97d1915... | `custom-text` | ` \| ` | 分隔符文本 |
+| 1 | 7e10a4fa... | `tokens-input` | green | 显示输入 Token 数量 |
+| 2 | ba976a2d... | `separator` | — | 分隔符 |
+| 3 | a9b7cd5f... | `tokens-cached` | brightMagenta | 显示缓存 Token 数量 |
+| 4 | 922d475a... | `separator` | — | 分隔符 |
+| 5 | b0371079... | `tokens-output` | brightBlue | 显示输出 Token 数量 |
+| 6 | 8168b6ba... | `separator` | — | 分隔符 |
 | 7 | 1d962898... | `tokens-total` | — | 显示 Token 合计 |
-| 8 | 86066bc3... | `custom-text` | ` \| ` | 分隔符文本 |
-| 9 | 8584f767... | `total-speed` | — | 显示总 Token 速度 (tok/s) |
+| 8 | 3a6a4b3c... | `separator` | — | 分隔符 |
+| 9 | 8584f767... | `total-speed` | brightBlack | 显示总 Token 速度 (tok/s) |
 
 **第 3 行**：空行（预留）
 
@@ -274,10 +274,9 @@
 
 | 配置项 | 值 | 作用 |
 |--------|-----|------|
-| 钩子1 匹配器 | `Bash` | 匹配所有 Bash 命令 |
-| 钩子1 命令 | `C:\Users\<用户名>\.claude\rtk.exe hook claude` | RTK 命令重写（硬编码路径） |
-| 钩子2 匹配器 | `Bash` | 匹配所有 Bash 命令 |
-| 钩子2 命令 | `rtk hook claude` | RTK 命令重写（使用命令名） |
+| 钩子匹配器 | `Bash` | 匹配所有 Bash 命令 |
+| 钩子命令 | `C:\Users\<用户名>\.claude\rtk.exe hook claude` | RTK 命令重写（硬编码路径） |
+| 钩子类型 | `command` | 钩子类型 |
 
 ### RTK 元命令
 
@@ -311,11 +310,12 @@
 |-----------|------------|------|
 | ccstatusline-zh | 33 项 | 含布局 9 组件 + 样式 7 项 + Powerline 7 项 + statusLine 3 项 + TUI 配置 |
 | chrome-devtools-mcp | 4 项 | MCP 配置 |
-| RTK | 6 项 | hooks 配置 + 元命令 + 版本信息 |
+| RTK | 5 项 | hooks 配置 + 元命令 + 版本信息 |
 | MCP 服务 | 2 项 | github + zhipu-search |
-| **总计** | **45 项** | |
+| **总计** | **44 项** | |
 
 ---
 
 *备份时间：2026/05/21*
 *环境检查更新：2026/05/21*
+*配置更新：2026/06/10*
