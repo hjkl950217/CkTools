@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SignalR Chat</title>
+    <script src="../signalr.min.js"></script>
+</head>
+<body>
+    <h1>SignalR Chat</h1>
+
+    <input type="text" id="messageInput" />
+    <button id="sendButton">发送</button>
+    <button id="stopButton">关闭</button>
+    <div id="messages"></div>
+
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chatHub")
+            .build();
+
+        const messagesDiv = document.getElementById("messages");
+        const messageInput = document.getElementById("messageInput");
+        const sendButton = document.getElementById("sendButton");
+        const stopButton = document.getElementById("stopButton");
+
+        //订阅“ReceiveMessage”事件
+        connection.on("PublicClientChannel", function (user, message) {
+            const msg = user + ": " + message;
+            const li = document.createElement("li");
+            li.textContent = msg;
+            messagesDiv.appendChild(li);
+        });
+
+        //定义发送按钮的行为
+        sendButton.addEventListener("click", function (event) {
+            const user = "User"; // 可以修改为用户输入
+            const message = messageInput.value;//获取输入内容
+            connection
+                .invoke("SendMessageaaa", user, message)//调用服务端的 SendMessageaaa 方法
+                .catch(function (err) {
+                    return console.error(err.toString());
+                });
+            event.preventDefault();
+        });
+
+        //定义关闭按钮的行为
+        stopButton.addEventListener("click", function (event) {
+            connection
+                .stop()
+                .then(function () {
+                    console.log("SignalR 连接已成功关闭");
+
+                    const li = document.createElement("li");
+                    li.textContent = "关闭连接";
+                    messagesDiv.appendChild(li);
+                })
+                .catch(function (err) {
+                    console.error("关闭 SignalR 连接时出错: " + err.toString());
+                });
+        });
+
+        //启动
+        connection
+            .start()
+            .catch(function (err) {
+                return console.error(err.toString());
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "minFileSizeLimit": 20, //20M
+  "maxFileSizeLimit": 15360, //15GB
+
+  "allowedExtensions": [ "avi", "mp4", "ts", "wmv", "mpeg", "m4v", "mov", "asf", "flv", "f4v", "rmvb", "3gp", "mkv", "vob", "mts", "m2ts", "tp", "trp", "divx", "xvid" ],
+
+  "archiveFile": {
+    "source": "Y:\\qBittorrentDownload",
+    "target": "Y:\\LoActionMovie\\115",
+    "timeLimit": "2023-05-29",
+    "excludeAddrs": [
+      "Y:\\qBittorrentDownload\\incomplete"
+    ]
+  },
+  "archiveFolder": {
+    "sourceAddr": "C:\\Users\\gt\\Desktop\\testtttt\\aaaa",
+    "targetAddr": "C:\\Users\\gt\\Desktop\\testtttt\\bbbb",
+    "deleteFileMatch": [ ".!qb" ]
+  }
+}

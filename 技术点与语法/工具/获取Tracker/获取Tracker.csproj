@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>combineAllTracker</AssemblyName>
+    <TargetName>combineAllTracker</TargetName>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\工具基础核心库\工具基础核心库\工具基础核心库.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!--<ItemGroup>
+
+    --><!-- 引用 A 项目的 Common 文件夹下的所有 .cs 文件 --><!--
+    <Compile Include="..\linux文件复制工具\BaseTool\**\*.cs">
+      <Link>BaseTool\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+
+  </ItemGroup>-->
+
+</Project>

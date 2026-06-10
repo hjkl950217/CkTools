@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="练习Demo\容器.fs" />
+    <Compile Include="基础学习\类型模块.fs" />
+    <Compile Include="基础学习\类型.fs" />
+    <Compile Include="基础学习\基础.fs" />
+    <Compile Include="基础学习\递归.fs" />
+    <Compile Include="基础学习\序列.fs" />
+    <Compile Include="基础学习\数组.fs" />
+    <Compile Include="基础学习\列表.fs" />
+    <Compile Include="基础学习\管道.fs" />
+    <Compile Include="基础学习\元组.fs" />
+    <Compile Include="基础学习\字符串.fs" />
+    <Content Include="笔记.txt" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="9.0.100" />
+  </ItemGroup>
+
+</Project>

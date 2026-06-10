@@ -1,0 +1,45 @@
+﻿//%s 字符串
+//%i 整型
+//%f 浮点型
+//%b 布尔型
+//%A 元组\列表  "rand_list : %A" rand_list 就打印 rand_list : [1; 2; 3]
+//%O 对象
+//%M
+//%*s 10  10个字符,不足的向左填充
+//%-*s 10 10个字符,不足的向右填充
+
+(*
+    //1.声明可变 变量
+    let mutable weight = 175//这种是声明一个可变的变量
+    weight <- 170 //改变成170
+
+    printfn "Wright : %i" weight
+
+    let change_me = ref 10
+    change_me := 50
+
+    printfn "change_me : %i" ! change_me
+    //第二种看起来很麻烦，这是因为功能性语言希望的是不可变。你看到是什么样你进来就是什么样
+    //所以设计成这样了。我想设计者的目的也是希望尽量少的使用这种变量
+
+    //2.方法组
+    let mult_num x=x*3
+    let add_num y=y+5
+
+    let mult_add =mult_num>>add_num
+    let add_mult =mult_num<<add_num
+
+    printfn "mult_add : %i" (mult_add 10)
+    printfn "add_mult : %i" (add_mult 10)
+
+    //3. 模式匹配
+    let grade2: string=
+    match age with
+        | age when age<5 ->"Preschool"
+        | 5 ->"Kindergarten"
+        | age when ( age>5&&age<=18 ) -> String.Format("Go to Grade {0}",age-5)
+        | _->"Go to College"
+
+    printfn "%s" grade2
+
+*)
